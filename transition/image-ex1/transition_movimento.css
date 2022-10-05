@@ -1,0 +1,59 @@
+header,
+footer {
+
+    display:block;
+}
+
+main {
+    position: fixed;
+    width: 760px;
+    height: 500px;
+    margin: 10 px auto;
+    box-shadow: 0 0 10px #999999;
+    background-color: rgb(255,255,255);
+    text-align: center;
+}
+
+main::after {
+    clear: both
+}
+
+header {
+    width: 760px;
+    height: 110px;
+    background-image: url(header.jpg);
+    background-size: 100%;
+    margin-bottom: 40px;
+}
+
+#janela1, #janela2 {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    top: 130px;
+}
+
+#janela1 {
+    left: 10px;
+    background-color: rgb(0,102,204);
+    cursor: pointer;
+}
+
+#janela2 {
+    left: 180px;
+    background-color: rgb(255,0,0);
+    cursor: pointer;
+}
+
+#janela1:hover + #janela2 {
+    transition: all 0.5s ease-out;
+    transform: rotate(180deg);
+    left: 580px;
+}
+
+footer {
+    width: 100%;
+    height: 30px;
+    background-color: rgb(236,236,236);
+    margin-top: 40px;
+}
